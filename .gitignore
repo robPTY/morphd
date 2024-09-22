@@ -11,6 +11,12 @@
 # production
 /build
 
+# ESLint cache
+.eslintcache
+
+# typescript
+*.tsbuildinfo
+
 # misc
 .DS_Store
 .env.local
