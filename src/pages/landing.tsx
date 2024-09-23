@@ -4,7 +4,7 @@ import Navbar from "../components/navbar/navbar";
 
 export const Landing: React.FC = () => {
   return (
-    <div>
+    <div className="landingPageBody">
       <Navbar></Navbar>
     </div>
   );
