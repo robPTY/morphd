@@ -4,8 +4,13 @@ import Navbar from "../components/navbar/navbar";
 
 export const Landing: React.FC = () => {
   return (
-    <div className="landingPageBody">
-      <Navbar></Navbar>
+    <div>
+      <div className="landingPageHeader">
+        <Navbar></Navbar>
+      </div>
+      <div className="landingPageBody">
+        <p>Hi</p>
+      </div>
     </div>
   );
 };

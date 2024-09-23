@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 .logoHolder img{
     width: 2rem;
     height: auto;
+    margin-right: 0.7rem;
+}
+
+.logoHolder{
+    display: flex;
+    flex-direction: row;
+}
+
+.logoHolder a {
+    display: flex;       
+    align-items: center;  
+    text-decoration: none; 
 }
 
 .navbarHolder {
@@ -8,8 +22,24 @@
     background-color: #1eb2b7;
     border-radius: 2rem;
     margin: 0 auto;
-    padding: 0.5rem;
+    padding: 0.1rem;
     display: flex;
     position: fixed;
     margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-direction: row;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
 }
+
+.navbarHolder a{
+    font-size: 16px;
+    padding: 0rem 2rem;
+    color: #FFFFFF;
+    font-family: 'Inria Sans';
+    text-decoration: none;
+}
+
+/* TODO: MAKE SURE TO ADD MEDIA QUERY FOR SSMALLER SCREENS (MIN-WIDTH) */

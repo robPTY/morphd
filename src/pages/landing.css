@@ -1,4 +1,6 @@
-.landingPageBody{
-    background-color: #094663; /* #308c77; */
+.landingPageHeader{
+    background-color: #262329;/*#094663; /* #308c77; */
     height: 100vh;
+    display:flex;
+    justify-content: center;
 }
