@@ -11,3 +11,8 @@
     text-align: center;
     font-weight: 500;
 }
+
+.largeButtonBody:hover{
+    cursor: pointer;
+    background-color: #199a9e;
+}

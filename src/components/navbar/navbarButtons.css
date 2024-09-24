@@ -1,0 +1,10 @@
+.navbarButton{
+    border-radius: 9999px;
+    border: 1px solid white;
+    padding: 0.75rem;
+}
+
+.navbarButton:hover{
+    cursor: pointer;
+    background-color: #47c4c9;
+}
