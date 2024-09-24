@@ -1,0 +1,18 @@
+.inputBody{
+    border-radius: 0.375rem;
+    font-weight: 500;
+    height: 2.75rem;
+    width: 100%;
+    margin: 0.6rem;
+    color: white;
+    background-color: rgba(107, 114, 128, 0.1);
+    padding-left: 0.75rem;
+    border:none;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(156, 163, 175, 0.2);
+}
+
+.inputBody:focus{
+    border-bottom: 1px solid #1eb2b7;
+    outline: none;
+}
