@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.signInHeader{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+.signInSkeleton {
+    background-color: #262329;
+    height: 100vh;
+    color: white;
+    font-family: 'Inria Sans';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signInBody{
+    align-items: center;
+    height: 70%;
+    min-width: 20%;
+    max-width: 20%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem; 
+    padding-top: 2rem; 
+}
+
+@media (max-width: 600px) {
+    .signInBody {
+    width: 300px;
+    max-width: none;
+}
+}
+
+.AuthButtons{
+    width: 100%;
+}
+
+.bodyHeader{
+    max-width: 48rem;
+}
