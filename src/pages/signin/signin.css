@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.signInSkeleton a{
+    text-decoration: none;
+}
+
 .signInBody{
     align-items: center;
     height: 70%;
@@ -35,10 +39,41 @@
 }
 }
 
+.signInDivider{
+    padding: 0.5rem;
+}
+
 .AuthButtons{
     width: 100%;
 }
 
 .bodyHeader{
     max-width: 48rem;
+}
+
+.signInEmailSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.signInEmailSection span{
+    padding-left: 0.75rem;
+}
+
+.signInButton{
+    width: 100%;
+}
+
+.forgotPassword a{
+    padding: 0.25rem;
+    color: #ADADAD;
+}
+
+.signUpOption{
+    color:#ADADAD;
+}
+
+.signUpOption a{
+    color: white;
 }

@@ -1,7 +1,10 @@
 import React from "react";
 import Navbar from "../../components/navbar/navbar";
 import AuthButton from "../../components/authButton/authButton";
+import Input from "../../components/input/input";
+import LargeButton from "../../components/largeButton/largeButton";
 import "./signin.css";
+import { Link } from "react-router-dom";
 
 export const SignIn: React.FC = () => {
   return (
@@ -21,7 +24,25 @@ export const SignIn: React.FC = () => {
         <div className="signInDivider">
           <span>Or, sign in with your email</span>
         </div>
-        <div className="signInEmailSection"></div>
+        <div className="signInEmailSection">
+          <span>Email</span>
+          <Input inputType="email" placeholder="aubergine@email.com" />
+          <span>Password</span>
+          <Input inputType="password" placeholder="********" />
+        </div>
+        <div className="forgotPassword">
+          <span>
+            <Link to="/reset-password">Forgot password?</Link>
+          </span>
+        </div>
+        <div className="signInButton">
+          <LargeButton buttonText="Sign In" />
+        </div>
+        <div className="signUpOption">
+          <span>
+            Don't have an account? <Link to="/signup">Sign Up</Link>
+          </span>
+        </div>
       </div>
     </div>
   );
