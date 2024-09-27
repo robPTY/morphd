@@ -3,12 +3,13 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  UserCredential,
 } from "firebase/auth";
 import { auth } from "../firebaseConfig";
 
 interface AuthContextProps {
   currentUser: any;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<UserCredential>;
   logout: () => Promise<void>;
 }
 
