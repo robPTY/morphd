@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/navbar/navbar";
 import AuthButton from "../../components/authButton/authButton";
 import Input from "../../components/input/input";
 import LargeButton from "../../components/largeButton/largeButton";
 import "./signin.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../auth/authContext";
 
 export const SignIn: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth() ?? {};
+  const navigate = useNavigate();
+
+  const processSubmit = async () => {
+    try {
+      if (login) {
+        await login(email, password);
+        navigate("/reset-password");
+      }
+    } catch (error) {
+      console.error("Failed to sign in:", error);
+    }
+  };
+
   return (
     <div className="signInSkeleton">
       <div className="signInHeader">
@@ -26,9 +43,23 @@ export const SignIn: React.FC = () => {
         </div>
         <div className="signInEmailSection">
           <span>Email</span>
-          <Input inputType="email" placeholder="aubergine@email.com" />
+          <Input
+            inputType="email"
+            placeholder="aubergine@email.com"
+            value={email}
+            onChange={(e: {
+              target: { value: React.SetStateAction<string> };
+            }) => setEmail(e.target.value)}
+          />
           <span>Password</span>
-          <Input inputType="password" placeholder="********" />
+          <Input
+            inputType="password"
+            placeholder="********"
+            value={password}
+            onChange={(e: {
+              target: { value: React.SetStateAction<string> };
+            }) => setPassword(e.target.value)}
+          />
         </div>
         <div className="forgotPassword">
           <span>
@@ -36,7 +67,7 @@ export const SignIn: React.FC = () => {
           </span>
         </div>
         <div className="signInButton">
-          <LargeButton buttonText="Sign In" />
+          <LargeButton buttonText="Sign In" onClick={processSubmit} />
         </div>
         <div className="signUpOption">
           <span>
