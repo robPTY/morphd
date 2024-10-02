@@ -12,15 +12,22 @@ export const SignIn: React.FC = () => {
   const [password, setPassword] = useState("");
   const { login } = useAuth() ?? {};
   const navigate = useNavigate();
-
+  let loginStatus = "";
   const processSubmit = async () => {
     try {
       if (login) {
         await login(email, password);
-        navigate("/reset-password");
+        navigate("/library");
       }
     } catch (error) {
       console.error("Failed to sign in:", error);
+      loginStatus = "Failed to sign in. Please try again";
+      const errorText = document.getElementById("wrongLogin");
+      if (errorText) {
+        (errorText as HTMLElement).style.display = "block";
+        (errorText as HTMLElement).innerHTML =
+          "Faield to sign in. Please try again";
+      }
     }
   };
 
@@ -62,6 +69,7 @@ export const SignIn: React.FC = () => {
           />
         </div>
         <div className="forgotPassword">
+          <span id="wrongLogin">{loginStatus}</span>
           <span>
             <Link to="/reset-password">Forgot password?</Link>
           </span>
