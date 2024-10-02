@@ -1,79 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-.signInHeader{
-    display:flex;
-    justify-content: center;
-    margin-bottom: 8rem;
+.signInHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8rem;
 }
 
 .signInSkeleton {
-    background-color: #262329;
-    height: 100vh;
-    color: white;
-    font-family: 'Inria Sans';
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #262329;
+  height: 100vh;
+  color: white;
+  font-family: "Inria Sans";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.signInSkeleton a{
-    text-decoration: none;
+.signInSkeleton a {
+  text-decoration: none;
 }
 
-.signInBody{
-    align-items: center;
-    height: 70%;
-    min-width: 20%;
-    max-width: 20%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3rem; 
-    padding-top: 2rem; 
+.signInBody {
+  align-items: center;
+  height: 70%;
+  min-width: 20%;
+  max-width: 20%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 @media (max-width: 600px) {
-    .signInBody {
+  .signInBody {
     width: 300px;
     max-width: none;
-}
-}
-
-.signInDivider{
-    padding: 0.5rem;
+  }
 }
 
-.AuthButtons{
-    width: 100%;
+.signInDivider {
+  padding: 0.5rem;
 }
 
-.bodyHeader{
-    max-width: 48rem;
+.AuthButtons {
+  width: 100%;
 }
 
-.signInEmailSection{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.bodyHeader {
+  max-width: 48rem;
 }
 
-.signInEmailSection span{
-    padding-left: 0.75rem;
+.signInEmailSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.signInButton{
-    width: 100%;
+.signInEmailSection span {
+  padding-left: 0.75rem;
 }
 
-.forgotPassword a{
-    padding: 0.25rem;
-    color: #ADADAD;
+.signInButton {
+  width: 100%;
 }
 
-.signUpOption{
-    color:#ADADAD;
+.forgotPassword a {
+  padding: 0.25rem;
+  color: #adadad;
 }
 
-.signUpOption a{
-    color: white;
+.forgotPassword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrongLogin {
+  display: none;
+  color: #e44d4d;
+}
+
+.signUpOption {
+  color: #adadad;
+}
+
+.signUpOption a {
+  color: white;
 }
