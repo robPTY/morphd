@@ -1,10 +1,16 @@
-.navbarButton{
-    border-radius: 9999px;
-    border: 1px solid white;
-    padding: 0.75rem;
+.navbarButton {
+  border-radius: 9999px;
+  border: 1px solid white;
+  padding: 0.75rem;
 }
 
-.navbarButton:hover{
-    cursor: pointer;
-    background-color: #47c4c9;
+.navbarButton:hover {
+  cursor: pointer;
+  background-color: #47c4c9;
+}
+
+@media (max-width: 768px) {
+  .navbarButton {
+    padding: 0.25rem;
+  }
 }

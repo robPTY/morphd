@@ -1,3 +1,9 @@
 body {
   background-color: #262329;
 }
+
+.library-body {
+  margin: 10rem;
+  background-color: #199a9e;
+  height: 70%;
+}

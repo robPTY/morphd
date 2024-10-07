@@ -1,66 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
-.logoHolder img{
-    width: 2rem;
-    height: auto;
-    margin-right: 0.7rem;
+.logoHolder img {
+  width: 2rem;
+  height: auto;
+  margin-right: 0.7rem;
 }
 
-.logoHolder{
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
+.logoHolder {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
 }
 
 .logoHolder a {
-    display: flex;       
-    align-items: center;  
-    text-decoration: none; 
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .navbarHolder {
-    width: 55%;
-    min-width: 45%;
-    background-color: #1eb2b7;
-    border-radius: 2rem;
-    margin: 0 auto;
-    padding: 0.1rem;
-    display: flex;
-    position: fixed;
-    margin-top: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 55%;
+  min-width: 45%;
+  background-color: #1eb2b7;
+  border-radius: 2rem;
+  margin: 0 auto;
+  padding: 0.1rem;
+  display: flex;
+  position: fixed;
+  margin-top: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbarHolder a{
-    font-size: 16px;
-    padding: 0rem 1rem;
-    color: #FFFFFF;
-    font-family: 'Inria Sans';
-    text-decoration: none;
+.navbarHolder a {
+  font-size: 16px;
+  padding: 0rem 1rem;
+  color: #ffffff;
+  font-family: "Inria Sans";
+  text-decoration: none;
 }
 
-.navbarHolder a:hover{
-    border-radius: 9999px;
-    background-color: #47c4c9;
+.navbarHolder a:hover {
+  border-radius: 9999px;
+  background-color: #47c4c9;
 }
 
-.navbarLinks{
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
+.navbarLinks {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
-.navbarLinks a{
-    margin: 0 0.25rem;
+.navbarMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLinks a {
+  margin: 0 0.25rem;
 }
 
 .navbarButtonsList {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 /* TODO: MAKE SURE TO ADD MEDIA QUERY FOR SSMALLER SCREENS (MIN-WIDTH) */
+.hamburgerMenu {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+@media (max-width: 1115px) {
+  .navbarMenu {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #1eb2b7;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px solid #47c4c9;
+  }
+
+  .navbarMenu a {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .navbarMenu a:hover,
+  a:active,
+  a:focus {
+    color: #e8d05a;
+  }
+
+  .navbarMenu.open {
+    display: flex;
+  }
+
+  .hamburgerMenu {
+    display: block;
+    color: #000;
+  }
+
+  .logoHolder {
+    flex: 1;
+  }
+}
